@@ -21,10 +21,10 @@ function QuestionForm(props) {
     event.preventDefault();
     fetch("http://localhost:4000/questions", {
       method: "POST",
-      headers: {
+      headers:{
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
+      body:JSON.stringify({
         prompt: formData.prompt,
         answers: [
           formData.answer1,
@@ -36,7 +36,6 @@ function QuestionForm(props) {
       }),
     });
   }
-    
 
   return (
     <section>
